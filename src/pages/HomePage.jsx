@@ -12,6 +12,9 @@ function HomePage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    document.title = "ExamGenAi";
+  }, []);
+  useEffect(() => {
     let timer;
 
     if (loading) {

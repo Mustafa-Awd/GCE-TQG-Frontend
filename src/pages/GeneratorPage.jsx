@@ -25,6 +25,10 @@ function GeneratorPage() {
   const difficulties = ["Easy", "Medium", "Hard"];
 
   useEffect(() => {
+    document.title = "Topic Questions Generator • ExamGenAi";
+  }, []);
+
+  useEffect(() => {
     let timer;
 
     if (loading) {

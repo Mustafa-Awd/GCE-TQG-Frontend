@@ -8,17 +8,14 @@ import {
 } from "react-router-dom";
 import GeneratorPage from "./pages/GeneratorPage";
 
-export default function LandingPage() {
-  const [subject, setSubject] = useState("IGCSE ICT");
-
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route paht="/">
-        <Route index element={<HomePage />} />
-        <Route path="home" element={<GeneratorPage />} />
-      </Route>,
-    ),
-  );
-
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/">
+      <Route index element={<HomePage />} />
+      <Route path="home" element={<GeneratorPage />} />
+    </Route>,
+  ),
+);
+export default function App() {
   return <RouterProvider router={router} />;
 }

@@ -4,29 +4,30 @@ import { Link } from "react-router-dom";
 function Navbar({ home = false }) {
   return (
     <>
-      <header className="w-full flex items-center justify-between px-6 py-4 border-b border-white/10">
-        <div className="text-xl font-bold tracking-tight">ExamGen AI</div>
+      <nav className="border-b border-slate-800">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+          <h1 className="text-2xl font-bold">
+            Exam<span className="text-blue-500">Gen</span> AI
+          </h1>
 
-        {home ? (
-          // create react hyperlink to home page
-
-          <Link
-            to="/home"
-            className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-medium"
-          >
-            Launch app
-          </Link>
-        ) : (
-          <div className="flex items-center gap-4">
-            <button className="text-sm text-gray-400 hover:text-white transition">
-              History
-            </button>
-            <button className="px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-white text-sm font-medium hover:bg-white/20 transition">
-              My Account
-            </button>
+          <div className="space-x-4">
+            <a
+              href="https://github.com/Mustafa-Awd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-white"
+            >
+              GitHub
+            </a>
+            <Link
+              to={home ? "/generate" : "/"}
+              className="rounded-xl bg-blue-600 px-5 py-2 font-medium hover:bg-blue-700"
+            >
+              {home ? "Generate" : "Home"}
+            </Link>
           </div>
-        )}
-      </header>
+        </div>
+      </nav>
     </>
   );
 }

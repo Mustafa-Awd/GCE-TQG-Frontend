@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
 import {
   Route,
   createBrowserRouter,
@@ -11,8 +11,8 @@ import GeneratorPage from "./pages/GeneratorPage";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
-      <Route index element={<HomePage />} />
-      <Route path="home" element={<GeneratorPage />} />
+      <Route index element={<LandingPage />} />
+      <Route path="generate" element={<GeneratorPage />} />
     </Route>,
   ),
 );
